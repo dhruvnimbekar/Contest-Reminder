@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+   <%=title%>
+</title>
+<style>
+   table, tr, td {
+     border: 1px solid black;
+     border-collapse: collapse;
+   }
+   table {
+  margin-left: auto;
+  margin-right: auto;
+  background-color:lightgray;
+}
+   </style>
+</head>
+<body>
+   <div class = "current-contests">
+<h1>On Going Contests</h1>
+<table>
+   <tr>
+      <th>Contest Link</th>
+      <th>Coding Platform</th>
+   
+   </tr>
+<% for(let i of live ){ %>
+  <!-- <li>
+     <a href = "<%=i.contest%>" > <%=i.name%> </a>
+  </li> -->
+<tr>
+   <td>  <a href = "<%=i.contest%>" > <%=i.name%> </a></td>
+   <td><%=i.source%></td>
+   
+</tr>
+
+   <%}%>
+</table>
+
+   </div>
+   <div class = "future-contests">
+<h1>Future Contests</h1>
+
+<table>
+   <tr>
+     
+      <th>Contest Link</th>
+      <th>Coding Platform</th>
+      <th>Test Date</th>
+   </tr>
+<% for(let i of list_links ){ %>
+  <!-- <li>
+     <a href = "<%=i.contest%>" > <%=i.name%> </a>
+  </li> -->
+<tr>
+ 
+   <td>  <a href = "<%=i.contest%>" > <%=i.name%> </a></td>
+   <td><%=i.source%></td>
+   <td><%=i.date%></td>
+</tr>
+
+   <%}%>
+</table>
+</div>
+
+</body>
+</html>
